@@ -67,7 +67,7 @@ export class TestHub {
 }
   ```
   
-  The HubConfiguration decorator takes in an object where the key is the property that you wish to set the hub connection too. Its value is the HubConnectionBuilder from which to create the connection. For those whom use decorator dependency injection and don't wish to extend the decorator can do manual method of setup with the following.
+  The HubConfiguration decorator takes in an object where the key is the property that you wish to set the hub connection to. Its value is the HubConnectionBuilder from which to create the connection. For those whom use decorator dependency injection and don't wish to extend the decorator can do manual method of setup with the following.
   
   ```
   import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
@@ -100,4 +100,4 @@ export class TestHub2 {
 }
   ```
   
-  Note the initializeRoutes() method. In order for the routes to be mapped this must be called before being able to retrieve data from the connection.
+  Note the initializeRoutes() function within the constructor. In order for the routes to be mapped this must be called before being able to retrieve data from the connection.
