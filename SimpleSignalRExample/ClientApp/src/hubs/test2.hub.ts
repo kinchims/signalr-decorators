@@ -1,6 +1,6 @@
 import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
 import { BehaviorSubject, Observable } from "rxjs";
-import { HubRoute, initializeRoutes, } from "signalr-decorators";
+import { HubRoute, initializeRoutes } from "signalr-decorators";
 
 export class TestHub2 {
     public connection!: HubConnection;
@@ -15,7 +15,7 @@ export class TestHub2 {
         this.connection = builder.build();
         initializeRoutes(this, this.connection);
     }
-    
+
     @HubRoute("SendMultiArgumentProgressAsync")
     private multiArgument(state: string, progress: number) {
         (this.progressMulti$ as BehaviorSubject<{ state: string, progress: number }>).next({ state: state, progress: progress });
