@@ -67,12 +67,12 @@ export class TestHub {
 }
   ```
   
-  The HubConfiguration decorator takes in an object where the key is the property that you wish to set the hub connection too. Its value is the HubConnectBuilder from which to create the connection. For those whom use decorator dependency injection and don't wish to extend the decorator can do manual method of setup with the following.
+  The HubConfiguration decorator takes in an object where the key is the property that you wish to set the hub connection too. Its value is the HubConnectionBuilder from which to create the connection. For those whom use decorator dependency injection and don't wish to extend the decorator can do manual method of setup with the following.
   
   ```
   import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
 import { BehaviorSubject, Observable } from "rxjs";
-import { HubRoute, initializeRoutes, } from "signalr-decorators";
+import { HubRoute, initializeRoutes } from "signalr-decorators";
 
 export class TestHub2 {
     public connection!: HubConnection;
