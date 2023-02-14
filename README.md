@@ -1,6 +1,6 @@
 ### signalr-decorators
 ## Purpose
-Reduce boiler plate hub methods and increasing readability/maintainability through decorators.
+SignalR decorators to improve code readability.
 
 ## Examples
 
@@ -20,7 +20,7 @@ private send(data: any) {
 
     }
 ```
-With decorators we can define a function in the class to do the same thing; while having the binding in the place as the definition.
+With decorators we can define a method in the class to do the same thing; while having the binding in the place as the definition.
 
 ``` 
 @HubRoute("send")
