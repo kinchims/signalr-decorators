@@ -10,8 +10,17 @@ connection.on("send", data => {
     console.log(data);
 });
 `
+Alternatively you could do it this way
+```
+public constructor() {
+    connection.on("send", this.send);
+}
 
-With decorators we can define a function in the class to do the same thing
+private send(data: any) {
+
+    }
+```
+With decorators we can define a function in the class to do the same thing; while having the binding in the place as the definition.
 
 ``` 
 @HubRoute("send")
