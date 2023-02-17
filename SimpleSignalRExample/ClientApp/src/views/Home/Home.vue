@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div>
-    <div class="loader" :style="{ width:progress }"></div>
+    <div class="loader" :style="{ transform:progress }"></div>
     </div>
     <div>
-    <div class="loader" :style="{ width:progress2 }"></div>
+    <div class="loader" :style="{ transform:progress2 }"></div>
     </div>
   </div>
 </template>
@@ -43,11 +43,11 @@ export default class App extends Vue {
     console.log(this.hub, this.hub2)
 
     this.hub.progressMulti$.subscribe((x) => {
-      this.progress = `${x.progress}%`;
+      this.progress = `scaleX(${x.progress}%)`;
     });
 
     this.hub2.progressMulti$.subscribe((x) => {
-      this.progress2 = `${x.progress}%`;
+      this.progress2 = `scaleX(${x.progress}%)`;
     });
 
     this.hub.connection.start();
