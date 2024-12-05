@@ -1,6 +1,6 @@
 {
   "name": "signalr-decorators",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "main": "dist/index.js",
   "license": "MIT",
@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/kinchims/signalr-decorators",
   "dependencies": {
-    "@microsoft/signalr": "~7.0.2"
+    "@microsoft/signalr": "^8.0.7"
   },
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "typescript":  "^5.6.3"
   }
 }
